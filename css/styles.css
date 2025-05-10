@@ -1,7 +1,7 @@
-* {
+/* * {
     outline: 1px solid red;
 }
-html,
+html, */
 body,
 div,
 span,
@@ -102,20 +102,23 @@ table {
     height: 100%;
     max-width: 100%;
 }
-h1 {
+#tituloHeader {
+    width: 100%;
     position: absolute;
     z-index: 2;
-    top: 25%;
-    left: 20%;
-    transform: translate(-20%, -25%);
-    font-size: clamp(5rem, 5vw, 7rem);
-    color: #000000;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(0rem, 9vw, 7rem);
+    background: linear-gradient(45deg, #3b3ba1, #512672,#791fad,#9315d1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     font-family: "UnifrakturCook", Arial;
     font-weight: 300;
     text-transform: capitalize;
+    padding-left: 1rem;
 }
-h1 span {
-    background: linear-gradient(45deg, #ff0000, #dd4a06, #ff8800, #ffd700);
+#tituloHeader span {
+    background: linear-gradient(45deg, #a815d4, #d80b0b, #ec7a1c, #fcdc2b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
@@ -131,3 +134,5 @@ h1 span {
   z-index: 1;
   top: 0;
 }
+/* encerrando cabeçalho */ 
+
