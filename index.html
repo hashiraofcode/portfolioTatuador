@@ -11,7 +11,8 @@
     <!-- link de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=UnifrakturCook:wght@700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=UnifrakturCook:wght@700&display=swap"
         rel="stylesheet">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/97a46d9c43.js" crossorigin="anonymous"></script>
@@ -27,31 +28,40 @@
                 <video autoplay muted loop playsinline
                     src="https://ia800306.us.archive.org/10/items/tattoVideoMobile/tattoVideoMobile.mp4"
                     aria-hidden="true"></video>
-                    <div class="overlay"></div>
+                <div class="overlay"></div>
             </div>
             <h2 id="tituloHeader">Trasformando Paixões em <span>arte</span></h2>
         </header>
-        <aside>
+        <aside id="aside">
             <div class="perfilContainer">
-                <picture>
-                    <source srcset="assets/fotoDoTatuador.jpg" media="(min-width: 800px)">
-                    <source srcset="assets/responsiveAssets/fotoDoTatuador.webp" media="(max-width: 800px)">
-                    <img src="assets/fotoDoTatuador.jpg" alt="">
-                </picture>
+                <div class="imgContainer">
+                    <picture>
+                        <source srcset="assets/fotoDoTatuador.jpg" media="(min-width: 800px)">
+                        <source srcset="assets/responsiveAssets/fotoDoTatuador.webp" media="(max-width: 800px)">
+                        <img src="assets/fotoDoTatuador.jpg" alt="">
+                    </picture>
+                </div>
                 <div class="nomeContent">
                     <h2>Roberto Sales Alves</h2>
-                    <p>Tatuador Especialista em Realismo</p>
+                    <h1>Tatuador Especialista em Realismo</h1>
                 </div>
                 <div class="redesSociais">
-                    <a href="">Instagram</a>
-                    <a href="">Facebook</a>
-                    <a href="">X</a>
-                    <h6>Me siga nas minhas redes sociais!!! </h6>
+                    <h3>Me siga nas minhas redes sociais!!!</h3>
+                    <div class="botoes">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
                 </div>
+                <div class="frase">
+                    <i class="fa-solid fa-quote-left" id="esquerda"></i>
+                    <i class="fa-solid fa-quote-right" id="direita"></i>
+                    <h5>Tatuagem é sentir na pele aquilo que vive no coração.</h5>
+                </div>
+                <i class="fa-solid fa-xmark"></i>
             </div>
-
-
         </aside>
+        <i class="fa-solid fa-bars" id="menu"></i>
     </div>
 
 </body>

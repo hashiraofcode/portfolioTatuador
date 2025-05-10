@@ -17,8 +17,8 @@ a,
 address,
 em,
 img,
-ins, 
-strong, 
+ins,
+strong,
 b,
 u,
 i,
@@ -29,7 +29,7 @@ fieldset,
 form,
 label,
 legend,
-table,  
+table,
 tbody,
 tfoot,
 thead,
@@ -38,7 +38,7 @@ th,
 main,
 td,
 article,
-aside, 
+aside,
 figure,
 figcaption,
 footer,
@@ -53,42 +53,48 @@ mark,
 audio,
 video,
 iframe {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 html {
     font-size: 62.5%;
 }
 
 body {
-	font: 2.5rem 'Noto Sans', Arial, Helvetica, sans-serif;
-	color: #2e2e2e;
-	line-height: 1;
+    font: 2.5rem 'Noto Sans', Arial, Helvetica, sans-serif;
+    color: #2e2e2e;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
 }
+
 #container {
-   width: 100%;
+    width: 100%;
     height: auto;
     overflow: hidden;
 }
+
 /* esta página foi desenvolvida mobile first */
 .header {
-    max-width:100%;
+    max-width: 100%;
     height: 35dvh;
     position: relative;
 }
+
 .videoContainer {
     width: 100%;
     height: 100%;
@@ -96,12 +102,14 @@ table {
     z-index: 0;
     display: block;
 }
+
 .videoContainer video {
     object-fit: cover;
     width: 100%;
     height: 100%;
     max-width: 100%;
 }
+
 #tituloHeader {
     width: 100%;
     position: absolute;
@@ -109,7 +117,7 @@ table {
     top: 50%;
     transform: translateY(-50%);
     font-size: clamp(0rem, 9vw, 7rem);
-    background: linear-gradient(45deg, #3b3ba1, #512672,#791fad,#9315d1);
+    background: linear-gradient(45deg, #3b3ba1, #512672, #791fad, #9315d1);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-family: "UnifrakturCook", Arial;
@@ -117,6 +125,7 @@ table {
     text-transform: capitalize;
     padding-left: 1rem;
 }
+
 #tituloHeader span {
     background: linear-gradient(45deg, #a815d4, #d80b0b, #ec7a1c, #fcdc2b);
     -webkit-background-clip: text;
@@ -126,13 +135,171 @@ table {
     color: #ff0000;
     display: block;
 }
+
 .videoContainer .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.336); /* Preto transparente */
-  z-index: 1;
-  top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.336);
+    /* Preto transparente */
+    z-index: 1;
+    top: 0;
 }
-/* encerrando cabeçalho */ 
+
+/* encerrando cabeçalho */
+/*-------------------  */
+
+/* começando aside */
+#aside {
+    position: absolute;
+    left: 0;
+    height: 100dvh;
+    width: 90dvw;
+    max-width: 570px;
+    top: 0;
+    background-color: #2e2e2e;
+    z-index: 5;
+}
+
+.perfilContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.perfilContainer i {
+    color: #9315d1;
+    font-size: 5rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 5rem;
+    z-index: 8;
+}
+
+#menu {
+    color: #9315d1;
+    font-size: 5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 8;
+}
+
+.imgContainer {
+    max-width: 280px;
+    max-width: 270px;
+    width: 60%;
+    height: 25%;
+    margin-top: 60px;
+}
+
+.imgContainer picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%
+}
+
+.nomeContent {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    border: 2px solid rgb(219, 211, 211);
+    border-radius: 50px;
+    box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
+    padding: 2rem 0;
+    gap: 7px;
+}
+
+.nomeContent h2 {
+    font-size: clamp(2rem, 7vw, 4rem); /* ideal 7vw nm 2rem nmaior 4rem*/
+    color: #dfd2d2;
+    font-family: "Noto Sans";
+    font-weight: 200;
+}
+
+.nomeContent h1 {
+    width: auto;
+    height: auto;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #9315d1;
+    text-transform: uppercase;
+
+}
+
+.redesSociais {
+    width: 100%;
+    height: auto;
+}
+.redesSociais h3 {
+    font-family: "UnifrakturCook","Noto Sans", Arial, Helvetica, sans-serif;
+    color: #681f85;
+    font-size: clamp(2.3rem, 5vw, 3rem);
+    margin: 20px 0 35px 0;
+    padding-left: 1rem;
+    text-transform: capitalize;
+}
+.botoes {
+    width: 95%;
+    height: auto;
+    display: flex;
+    gap: (10px, 40px, 45px);
+    justify-content: center;
+    margin: 10px auto;
+    border: 2px solid rgb(219, 211, 211);
+    border-radius: 50px;
+    box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
+    padding: 1rem 0;
+}
+
+.botoes a {
+    padding: 2rem;
+}
+
+.botoes a i {
+    position: static;
+    color: #791fad;
+    font-size: 4rem;
+
+}
+.frase {
+    width: 95%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border: 2px solid rgb(219, 211, 211);
+    border-radius: 50px;
+    box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
+    padding: 2rem 0;
+    gap: 7px;
+}
+.frase h5 {
+    width: 80%;
+    font-family: "UnifrakturCook","Noto Sans", Arial, Helvetica, sans-serif;
+    font-size: clamp(3.6rem, 6vw, 7rem);
+    background: linear-gradient( #621779, #8c12aa, #a50acc, #ba05e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.frase #esquerda {
+    position: absolute;
+}
+.frase #direita {
+position: absolute;
+bottom: 1.5rem;
+right: 1rem;
+}
 
