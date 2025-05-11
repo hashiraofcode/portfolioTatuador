@@ -165,11 +165,11 @@ body {
     background-size: 300% 300%;
     z-index: 999999;
     display: none;
-    overflow: hidden;
+    overflow-x: hidden;
     display: block;
     transition: all 1.5s ease-in-out;
     animation: backgroundAnimado 6s ease-in-out infinite;
-    overflow: auto;
+ 
 }
 
 #aside.active {
@@ -177,6 +177,7 @@ body {
     width: 90dvw;
     display: flex;
     transition: all 1.5s ease-in-out;
+    overflow-y: auto;
 }
 
 .perfilContainer {
@@ -392,6 +393,8 @@ body {
     top: calc(35dvh + 10px);
     left: 10px;
     z-index: 10;
+    box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
+    overflow: hidden;
 }
 
 #arrow {
@@ -468,8 +471,8 @@ body {
 }
 
  #opcoes button.selecionado {
-    background-color: linear-gradient(45deg, #000000, #3a3939, #5e5c5c);
-    border-top: 2px solid #8c12aa;
+    background-image: linear-gradient(45deg, #000000, #3a3939, #5e5c5c);
+    border-top: 2px solid #3b003d;
 }
 
 #nav.menuAberto #opcoes {
