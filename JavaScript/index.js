@@ -45,13 +45,13 @@ function limparInterface() {
 
 function abrirAbout() {
     limparSelecionados();
-    // limparInterface();
+    limparInterface();
     about.classList.add("selecionado");
-    // interface.classList.add("sobre");
+    interface.classList.add("sobre");
 }
 
 function abrirRealismo() {
-    // limparInterface();
+    limparInterface();
     limparSelecionados();
     realismo.classList.add("selecionado");
     // interface.classList.add("tattoRealismo");
@@ -59,13 +59,13 @@ function abrirRealismo() {
 
 function abrirLine() {
     limparSelecionados();
-    // limparInterface();
+    limparInterface();
     line.classList.add("selecionado");
     // interface.classList.add("tattoLine");
 }
 
 function abrirOld() {
-    // limparInterface();
+    limparInterface();
     limparSelecionados();
     old.classList.add("selecionado");
     // interface.classList.remove("tattoOld");
