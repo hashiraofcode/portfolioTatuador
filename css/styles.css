@@ -169,6 +169,7 @@ body {
     display: block;
     transition: all 1.5s ease-in-out;
     animation: backgroundAnimado 6s ease-in-out infinite;
+    overflow: auto;
 }
 
 #aside.active {
@@ -295,7 +296,7 @@ body {
 .nomeContent h1 {
     width: auto;
     height: auto;
-    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     color: #9315d1;
     text-transform: uppercase;
 
@@ -309,7 +310,7 @@ body {
 .redesSociais h3 {
     font-family: "UnifrakturCook", "Noto Sans", Arial, Helvetica, sans-serif;
     color: #681f85;
-    font-size: clamp(3rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     margin: 20px 0 35px 0;
     padding-left: 1rem;
     text-transform: capitalize;
@@ -357,7 +358,7 @@ body {
 .frase h5 {
     width: 80%;
     font-family: "UnifrakturCook", "Noto Sans", Arial, Helvetica, sans-serif;
-    font-size: clamp(3.6rem, 6vw, 7rem);
+    font-size: clamp(3rem, 6vw, 7rem);
     background: linear-gradient(#621779, #8c12aa, #a50acc, #ba05e7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -369,7 +370,7 @@ body {
     position: absolute;
     top: 1.2rem;
     left: 1.2rem;
-    font-size: clamp(1rem, 10vw, 3rem);
+    font-size: clamp(1rem, 10vw, 2rem);
 }
 
 .perfilContainer .frase i#direita {
@@ -377,7 +378,7 @@ body {
     position: absolute;
     bottom: 1.2rem;
     right: 1.2rem;
-    font-size: clamp(1rem, 10vw, 3rem);
+    font-size: clamp(1rem, 10vw, 2rem);
 }
 /*  meunu de navegação */
 #nav {
@@ -386,6 +387,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    border-radius: 20px;
+    position: absolute;
+    top: calc(35dvh + 10px);
+    left: 10px;
+    z-index: 10;
 }
 
 #arrow {
@@ -394,8 +400,11 @@ body {
 }
 
 #nav.menuAberto {
-    background-image: linear-gradient(45deg, #000000, #3a3939, #5e5c5c);
+     background-image: linear-gradient(135deg, #7f00ff, #e100ff);
     border: 1px solid #ffffff;
+    background-size: 200% 200%;
+     animation: backgroundAnimado 6s ease-in-out infinite;
+     height: 172.75px;
 }
 
 #btn-main {
@@ -405,21 +414,28 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    background-image: linear-gradient(45deg, #000000, #3a3939, #5e5c5c);
+    background-image: linear-gradient(135deg, #7f00ff, #e100ff);
+    background-size: 200% 200%;
     text-transform: uppercase;
     font-family: "Noto Sans";
     font-size: 1rem;
     border: none;
     border-radius: 50px;
+     animation: backgroundAnimado 6s ease-in-out infinite;
 
 }
 
-#btn-main.active {
-    border-top: 2px solid #9315d1;
+#btn-main.abrir {
+    border-top: 2px solid #aa00ff;
+}
+#btn-main img {
+    transform: rotate(0);
+     transition: all 1s ease-in-out;
 }
 
-#btn-main.active img {
-    transform: rotate(180deg)
+#btn-main.abrir img {
+    transform: rotate(180deg);
+    transition: all 1s ease-in-out;
 }
 
 #opcoes {
@@ -430,6 +446,7 @@ body {
     margin: 1px solid #ffffff;
     border-radius: 10px;
     overflow: hidden;
+      transition: all 1s ease-in-out;
 }
 
 #opcoes button {
@@ -455,8 +472,9 @@ body {
     border-top: 2px solid #8c12aa;
 }
 
-.menuAberto #opcoes {
+#nav.menuAberto #opcoes {
     width: 100%;
     height: auto;
-    animation: aparecerPerfil 1s ease-in-out 1.5s forwards;
+    animation: aparecerPerfil .5s ease-in-out 1s forwards;
+      
 }

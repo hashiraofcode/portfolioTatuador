@@ -12,3 +12,13 @@ function fecharMenu() {
 
 botaoX.addEventListener("click", fecharMenu)
 botaoMenu.addEventListener("click", abrirMenu)
+// fazendo funcionalidade do menu drop
+const btnAbrirDrop = document.getElementById("btn-main")
+
+function abrirDrop() {
+    btnAbrirDrop.classList.toggle("abrir")
+    const menuDrop = document.getElementById("nav")
+    menuDrop.classList.toggle("menuAberto")
+}
+
+btnAbrirDrop.addEventListener("click", abrirDrop)
