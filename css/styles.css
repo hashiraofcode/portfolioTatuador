@@ -81,6 +81,9 @@ table {
     border-spacing: 0;
     width: 100%;
 }
+body {
+    background-color: #000000;
+}
 
 #container {
     width: 100%;
@@ -157,12 +160,14 @@ table {
     width: 0;
     max-width: 570px;
     top: 0;
-    background-color: #2e2e2e;
+   background: linear-gradient(90deg, #000000, #121212, #000000);
+   background-size: 300% 300%;
     z-index: 999999;
     display: none;
     overflow: hidden;
     display: block;
-     transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    animation: backgroundAnimado 6s ease-in-out infinite;
 }
 
 #aside.active {
@@ -181,7 +186,6 @@ table {
     align-items: center;
     justify-content: flex-start;
     opacity: 0;
-   
 }
  #aside.active .perfilContainer {
     animation: aparecerPerfil 1s ease-in-out 1.5s forwards;
@@ -194,7 +198,31 @@ table {
         opacity: 1;
     }
 }
-
+@keyframes backgroundAnimado {
+    0% {
+        background-position: 0, 50%;
+    }
+    50% {
+        background-position: 100%, 50%;
+    }
+     100% {
+        background-position: 0, 50%;
+    }
+}
+@keyframes elementosAnimados {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateY(-5px);
+         box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
+    }
+    100% {
+        transform: translateX(0);
+        box-shadow: none;
+    }
+}
+    
 .perfilContainer i#fecharMenu {
     color: #9315d1;
     font-size: 5rem;
@@ -207,11 +235,12 @@ table {
 
 #menu {
     color: #9315d1;
-    font-size: 5rem;
+    font-size: clamp(2rem, 10vw, 3rem);
     position: absolute;
     top: 2rem;
     left: 2rem;
     z-index: 7;
+     /* animation: elementosAnimados 3s ease-in-out alternate infinite; */
 }
 
 .imgContainer {
@@ -226,7 +255,8 @@ table {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 100%
+    border-radius: 100%;
+    animation: elementosAnimados 3s ease-in-out alternate infinite;
 }
 
 .nomeContent {
@@ -301,7 +331,7 @@ table {
 
 .frase {
     width: 95%;
-    height: 40%;
+    height: 45%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -321,7 +351,7 @@ table {
     background: linear-gradient(#621779, #8c12aa, #a50acc, #ba05e7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-left: 4rem;
+    padding-left: 2.5rem;
 }
 
 .perfilContainer .frase i#esquerda {
@@ -329,7 +359,7 @@ table {
     position: absolute;
     top: 1.2rem;
     left: 1.2rem;
-    font-size: 4rem;
+    font-size: clamp(1rem, 10vw, 3rem);
 }
 
 .perfilContainer .frase i#direita {
@@ -337,5 +367,5 @@ table {
     position: absolute;
     bottom: 1.2rem;
     right: 1.2rem;
-    font-size: 4rem;
+    font-size: clamp(1rem, 10vw, 3rem);
 }
