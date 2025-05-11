@@ -1,7 +1,7 @@
 /* * {
     outline: 1px solid red;
-}
-html, */
+} */
+html,
 body,
 div,
 span,
@@ -152,13 +152,24 @@ table {
 /* começando aside */
 #aside {
     position: absolute;
-    left: 0;
+    left: -4px;
     height: 100dvh;
-    width: 90dvw;
+    width: 0;
     max-width: 570px;
     top: 0;
     background-color: #2e2e2e;
-    z-index: 5;
+    z-index: 999999;
+    display: none;
+    overflow: hidden;
+    display: block;
+     transition: all 1.5s ease-in-out;
+}
+
+#aside.active {
+    left: 0;
+    width: 90dvw;
+    display: flex;
+    transition: all 1.5s ease-in-out;
 }
 
 .perfilContainer {
@@ -169,9 +180,22 @@ table {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    opacity: 0;
+   
+}
+ #aside.active .perfilContainer {
+    animation: aparecerPerfil 1s ease-in-out 1.5s forwards;
+ }
+@keyframes aparecerPerfil {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.perfilContainer i {
+.perfilContainer i#fecharMenu {
     color: #9315d1;
     font-size: 5rem;
     position: absolute;
@@ -185,9 +209,9 @@ table {
     color: #9315d1;
     font-size: 5rem;
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 8;
+    top: 2rem;
+    left: 2rem;
+    z-index: 7;
 }
 
 .imgContainer {
@@ -221,7 +245,8 @@ table {
 }
 
 .nomeContent h2 {
-    font-size: clamp(2rem, 7vw, 4rem); /* ideal 7vw nm 2rem nmaior 4rem*/
+    font-size: clamp(2rem, 7vw, 4rem);
+    /* ideal 7vw nm 2rem nmaior 4rem*/
     color: #dfd2d2;
     font-family: "Noto Sans";
     font-weight: 200;
@@ -240,14 +265,16 @@ table {
     width: 100%;
     height: auto;
 }
+
 .redesSociais h3 {
-    font-family: "UnifrakturCook","Noto Sans", Arial, Helvetica, sans-serif;
+    font-family: "UnifrakturCook", "Noto Sans", Arial, Helvetica, sans-serif;
     color: #681f85;
-    font-size: clamp(2.3rem, 5vw, 3rem);
+    font-size: clamp(3rem, 5vw, 3rem);
     margin: 20px 0 35px 0;
     padding-left: 1rem;
     text-transform: capitalize;
 }
+
 .botoes {
     width: 95%;
     height: auto;
@@ -271,6 +298,7 @@ table {
     font-size: 4rem;
 
 }
+
 .frase {
     width: 95%;
     height: 40%;
@@ -285,21 +313,29 @@ table {
     padding: 2rem 0;
     gap: 7px;
 }
+
 .frase h5 {
     width: 80%;
-    font-family: "UnifrakturCook","Noto Sans", Arial, Helvetica, sans-serif;
+    font-family: "UnifrakturCook", "Noto Sans", Arial, Helvetica, sans-serif;
     font-size: clamp(3.6rem, 6vw, 7rem);
-    background: linear-gradient( #621779, #8c12aa, #a50acc, #ba05e7);
+    background: linear-gradient(#621779, #8c12aa, #a50acc, #ba05e7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    padding-left: 4rem;
 }
-.frase #esquerda {
+
+.perfilContainer .frase i#esquerda {
+    color: #ba05e7;
     position: absolute;
-}
-.frase #direita {
-position: absolute;
-bottom: 1.5rem;
-right: 1rem;
+    top: 1.2rem;
+    left: 1.2rem;
+    font-size: 4rem;
 }
 
+.perfilContainer .frase i#direita {
+    color: #ba05e7;
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    font-size: 4rem;
+}
