@@ -81,6 +81,7 @@ table {
     border-spacing: 0;
     width: 100%;
 }
+
 body {
     background-color: #000000;
 }
@@ -160,8 +161,8 @@ body {
     width: 0;
     max-width: 570px;
     top: 0;
-   background: linear-gradient(90deg, #000000, #121212, #000000);
-   background-size: 300% 300%;
+    background: linear-gradient(90deg, #000000, #121212, #000000);
+    background-size: 300% 300%;
     z-index: 999999;
     display: none;
     overflow: hidden;
@@ -187,42 +188,51 @@ body {
     justify-content: flex-start;
     opacity: 0;
 }
- #aside.active .perfilContainer {
+
+#aside.active .perfilContainer {
     animation: aparecerPerfil 1s ease-in-out 1.5s forwards;
- }
+}
+
 @keyframes aparecerPerfil {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 @keyframes backgroundAnimado {
     0% {
         background-position: 0, 50%;
     }
+
     50% {
         background-position: 100%, 50%;
     }
-     100% {
+
+    100% {
         background-position: 0, 50%;
     }
 }
+
 @keyframes elementosAnimados {
     0% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateY(-5px);
-         box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
+        box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
     }
+
     100% {
         transform: translateX(0);
         box-shadow: none;
     }
 }
-    
+
 .perfilContainer i#fecharMenu {
     color: #9315d1;
     font-size: 5rem;
@@ -240,7 +250,7 @@ body {
     top: 2rem;
     left: 2rem;
     z-index: 7;
-     /* animation: elementosAnimados 3s ease-in-out alternate infinite; */
+    /* animation: elementosAnimados 3s ease-in-out alternate infinite; */
 }
 
 .imgContainer {
@@ -368,4 +378,85 @@ body {
     bottom: 1.2rem;
     right: 1.2rem;
     font-size: clamp(1rem, 10vw, 3rem);
+}
+/*  meunu de navegação */
+#nav {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#arrow {
+    width: 15px;
+    height: 15px;
+}
+
+#nav.menuAberto {
+    background-image: linear-gradient(45deg, #000000, #3a3939, #5e5c5c);
+    border: 1px solid #ffffff;
+}
+
+#btn-main {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-image: linear-gradient(45deg, #000000, #3a3939, #5e5c5c);
+    text-transform: uppercase;
+    font-family: "Noto Sans";
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+
+}
+
+#btn-main.active {
+    border-top: 2px solid #9315d1;
+}
+
+#btn-main.active img {
+    transform: rotate(180deg)
+}
+
+#opcoes {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: transparent;
+    margin: 1px solid #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#opcoes button {
+    width: 100%;
+    height: 3rem;
+    display: block;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Noto Sans";
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#opcoes button:not(:last-child) {
+    border-bottom: 1px solid #ffffff;
+}
+
+ #opcoes button.selecionado {
+    background-color: linear-gradient(45deg, #000000, #3a3939, #5e5c5c);
+    border-top: 2px solid #8c12aa;
+}
+
+.menuAberto #opcoes {
+    width: 100%;
+    height: auto;
+    animation: aparecerPerfil 1s ease-in-out 1.5s forwards;
 }
