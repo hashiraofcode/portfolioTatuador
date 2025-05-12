@@ -398,7 +398,7 @@ body {
     z-index: 10;
     box-shadow: 10px 10px 60px -5px rgba(0, 0, 0, 0.64);
     overflow: hidden;
-     background: none;
+    background: none;
 }
 
 #arrow {
@@ -485,6 +485,7 @@ body {
     height: auto;
     animation: aparecerPerfil .5s ease-in-out 1s forwards;
 }
+
 /* Aqui começa o conteúdo */
 #interface {
     width: 100%;
@@ -496,6 +497,7 @@ body {
     padding-top: 12rem;
     padding-bottom: 5rem;
 }
+
 /* saber mais sobre */
 .saberSobre {
     width: 100%;
@@ -511,31 +513,35 @@ body {
     opacity: 0;
     display: none;
 }
+
 .saberSobre h4 {
     width: auto;
     height: auto;
-    font-size: clamp(4rem,12vw,4.5rem   );
+    font-size: clamp(4rem, 12vw, 4.5rem);
     font-weight: 300;
     color: #d4d0d6;
-    position: absolute; 
+    position: absolute;
     top: -55px;
     left: 0;
     padding-left: 2rem;
 }
+
 .containerImg {
     width: 50%;
     height: 200px;
     border-radius: 25px;
     overflow: hidden;
     border: 2px solid #929292;
-     animation: elementosAnimados 3s ease-in-out alternate infinite;
-     max-width: 190px;
+    animation: elementosAnimados 3s ease-in-out alternate infinite;
+    max-width: 190px;
 }
+
 .containerImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .saberSobre .texto p {
     width: 95%;
     height: auto;
@@ -547,14 +553,174 @@ body {
     hyphens: auto;
     color: #d6d6d6;
 }
+
 .texto {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
 .sobre .saberSobre {
     display: flex;
     animation: aparecerPerfil 1s ease-in-out .7s forwards;
+}
+
+/* começando o container de realismo */
+#estiloRealismo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    gap: 2rem;
+    opacity: 0;
+    display: none;
+
+}
+
+.tattoRealismo #estiloRealismo {
+    display: flex;
+    animation: aparecerPerfil 1s ease-in-out .7s forwards;
+}
+
+#estiloRealismo h4 {
+    width: auto;
+    height: auto;
+    font-size: clamp(4rem, 12vw, 4.5rem);
+    font-weight: 300;
+    color: #d4d0d6;
+    position: absolute;
+    top: -55px;
+    left: 0;
+    padding-left: 2rem;
+}
+
+.containerDoCatalogo {
+    width: 100%;
+    max-width: 380px;
+    height: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.containerDoCatalogo picture {
+    width: 100%;
+    height: 100%;
+}
+
+.containerDoCatalogo picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#estiloFineLine {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    gap: 2rem;
+    opacity: 0;
+    display: none;
+}
+.tattoLine #estiloFineLine {
+    display: flex;
+     animation: aparecerPerfil 1s ease-in-out .7s forwards;
+}
+#estiloFineLine h4 {
+    width: auto;
+    height: auto;
+    font-size: clamp(4rem, 12vw, 4.5rem);
+    font-weight: 300;
+    color: #d4d0d6;
+    position: absolute;
+    top: -55px;
+    left: 0;
+    padding-left: 2rem;
+    text-transform: capitalize;
+}
+#estiloOldSchool {
+     width: 100%;
+    height: 100%;
+    position: relative;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    gap: 2rem;
+    opacity: 0;
+    display: none;
+}
+.tattoOld #estiloOldSchool {
+    display: flex;
+    animation: aparecerPerfil 1s ease-in-out .7s forwards;
+}
+#estiloOldSchool  h4 {
+    width: auto;
+    height: auto;
+    font-size: clamp(4rem, 12vw, 4.5rem);
+    font-weight: 300;
+    color: #d4d0d6;
+    position: absolute;
+    top: -55px;
+    left: 0;
+    padding-left: 1rem;
+}
+/* footer */
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px 1fr 50px;
+    gap: 10px;
+    justify-items: start;
+    align-items: center;
+    padding: 2rem 0;
+
+}
+#iframe {
+    justify-self: center;
+}
+#marca {
+    width: 100%;
+    height: auto;
+    font-size: 3.4rem;
+    font-family:  "UnifrakturCook", "Noto Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding-left: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+#marca span {
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    color: #ffffff;
+}
+address {
+    width: 100%;
+    height: auto;
+}
+.endereço {
+    width: 100%;
+    height: auto;
+    font-size: 1.4rem;
+    color: #ffffff;
+    padding-left: .9rem;
 }

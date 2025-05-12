@@ -54,21 +54,21 @@ function abrirRealismo() {
     limparInterface();
     limparSelecionados();
     realismo.classList.add("selecionado");
-    // interface.classList.add("tattoRealismo");
+    interface.classList.add("tattoRealismo");
 }
 
 function abrirLine() {
     limparSelecionados();
     limparInterface();
     line.classList.add("selecionado");
-    // interface.classList.add("tattoLine");
+    interface.classList.add("tattoLine");
 }
 
 function abrirOld() {
     limparInterface();
     limparSelecionados();
     old.classList.add("selecionado");
-    // interface.classList.remove("tattoOld");
+    interface.classList.add("tattoOld");
 }
 
 about.addEventListener("click", abrirAbout);
