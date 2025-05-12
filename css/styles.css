@@ -90,6 +90,8 @@ body {
     width: 100%;
     height: auto;
     overflow: hidden;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 /* esta página foi desenvolvida mobile first */
@@ -545,7 +547,7 @@ body {
 .saberSobre .texto p {
     width: 95%;
     height: auto;
-    font-size: clamp(10vw);
+    font-size: clamp(2rem, 10vw, 4.1rem);
     text-align: justify;
     text-indent: 1rem;
     line-height: 1.5;
@@ -560,6 +562,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    max-width: 600px;
 }
 
 .sobre .saberSobre {
@@ -691,7 +694,6 @@ footer {
     justify-items: start;
     align-items: center;
     padding: 2rem 0;
-
 }
 #iframe {
     justify-self: center;
@@ -723,4 +725,104 @@ address {
     font-size: 1.4rem;
     color: #ffffff;
     padding-left: .9rem;
+}
+footer p {
+    width: auto;
+    height: auto;
+    font-size: 1.4rem;
+     display: flex;
+    align-items: flex-start;
+    color: #ffffff;
+    /* text-align: center; */
+    justify-self: center;
+    grid-row: 4/5;
+}
+footer p span {
+     width: auto;
+    height: auto;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-right: 7px;
+}
+/* iniciando responsividade */
+@media (min-width: 1200px) {
+    .header {
+        height: 50vh;
+    }
+    #tituloHeader {
+        left: 15%;
+    }
+    #menu {
+        display: none;
+    }
+    #nav {
+        position: static;
+        width: 100%;
+        height: 10vh;
+        border-radius: 0;
+    }
+    #btn-main {
+        display: none;
+    }
+    #opcoes {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        display: flex;
+        justify-content: space-evenly;
+        border-radius: 0;
+    }
+    #opcoes #about, #opcoes #realismo, #opcoes #line, #opcoes #old {
+        border: none;
+        height: 100%;
+        border-radius: 0;
+        text-align: center;
+    }
+    #estiloRealismo {
+        width: 85%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin: 0 auto;
+        display: none;
+    }
+    .tattoRealismo #estiloRealismo {
+        display: grid;
+    }
+    #f1 {
+        grid-row: 1/3;
+        grid-column: 3/4;
+    }
+    .containerDoCatalogo#f1 {
+        height: 100%;
+    }
+    .containerDoCatalogo#f2,  .containerDoCatalogo#f3,  .containerDoCatalogo#f4,  .containerDoCatalogo#f5 {
+        width: 100%;
+        height: 100%;
+    }
+    #estiloFineLine {
+         width: 85%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,400px);
+        margin: 0 auto;
+        display: none;
+    }
+    .tattoLine #estiloFineLine {
+        display: grid;
+    }
+    #estiloOldSchool {
+         width: 85%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin: 0 auto;
+        display: none;
+    }
+    .tattoOld #estiloOldSchool {
+        display: grid;
+    }
 }
