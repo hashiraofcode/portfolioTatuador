@@ -547,7 +547,7 @@ body {
 .saberSobre .texto p {
     width: 95%;
     height: auto;
-    font-size: clamp(2rem, 10vw, 4.1rem);
+    font-size: clamp(2rem, 10vw, 2rem);
     text-align: justify;
     text-indent: 1rem;
     line-height: 1.5;
@@ -824,5 +824,19 @@ footer p span {
     }
     .tattoOld #estiloOldSchool {
         display: grid;
+    }
+    .saberSobre .texto p {
+        width: 100%;
+        font-size: 3rem;
+    }
+    .texto {
+        max-width: 70%;
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+        padding: 3rem;
+    }
+    .containerImg {
+        max-width: 300px;
+        height: 400px;
     }
 }
