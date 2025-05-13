@@ -431,6 +431,7 @@ body {
     border: none;
     border-radius: 50px;
     animation: backgroundAnimado 6s ease-in-out infinite;
+    color: #000000;
 
 }
 
