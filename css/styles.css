@@ -745,6 +745,36 @@ footer p span {
     color: #ffffff;
     margin-right: 7px;
 }
+/* btn-whatsapp */
+#btn-whatsapp {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    animation: animacaoDoBtn 2s ease-in-out  alternate infinite;
+
+}
+#btn-whatsapp svg{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+@keyframes animacaoDoBtn {
+   0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+    }
+}
 /* iniciando responsividade */
 @media (min-width: 1200px) {
     .header {
