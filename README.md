@@ -39,7 +39,7 @@ HTML5 – Estruturação semântica e acessível do conteúdo.
 
 ## Link 🔗
 <p align="center">
-  <a href="https://seulink.com" target="_blank">
+  <a href="https://artenapele.netlify.app/" target="_blank">
     <img src="https://img.shields.io/badge/Ver%20Projeto-000000?style=for-the-badge&logo=github&logoColor=white" alt="Ver Projeto"/>
   </a>
 </p>
