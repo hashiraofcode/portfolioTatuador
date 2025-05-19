@@ -37,4 +37,11 @@ HTML5 – Estruturação semântica e acessível do conteúdo.
   <img src="assetsReadme/imagemMobile3.png" alt="img3" width="auto">
 </div>
 
+## Link 🔗
+<p align="center">
+  <a href="https://seulink.com" target="_blank">
+    <img src="https://img.shields.io/badge/Ver%20Projeto-000000?style=for-the-badge&logo=github&logoColor=white" alt="Ver Projeto"/>
+  </a>
+</p>
+
 
