@@ -16,12 +16,13 @@ HTML5 – Estruturação semântica e acessível do conteúdo.
 - Tag <picture> – Carregamento inteligente de imagens com diferentes resoluções.
 
 - Tag <video> – Inserção de vídeos como elemento visual complementar.
-
-## Hospedagem de mídia externa – Para garantir carregamento rápido e performance otimizada:
+  
+## Imagens do Projeto 🤳
+ Hospedagem de mídia externa – Para garantir carregamento rápido e performance otimizada:
   ### Desktop 💻
 ![img1](assetsReadme/imagemDesktop1.png)
 
-![img1](assetsReadme/imagemDesktop2.png)
+![img2](assetsReadme/imagemDesktop2.png)
 
-![img1](assetsReadme/imagemDesktop3.png)
+![img3](assetsReadme/imagemDesktop3.png)
 
